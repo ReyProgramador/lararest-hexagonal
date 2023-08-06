@@ -5,14 +5,15 @@ declare(strict_types=1);
 namespace Src\BoundedContext\Project\Infrastructure\Repositories;
 
 use App\Models\Project as EloquentProjectModel;
+// use App\Project as EloquentProjectModel;
 use Src\BoundedContext\Project\Domain\Contracts\ProjectRepositoryContract;
 use Src\BoundedContext\Project\Domain\Project;
-use Src\BoundedContext\Project\Domain\ValueObjects\ProjectEmail;
-use Src\BoundedContext\Project\Domain\ValueObjects\ProjectEmailVerifiedDate;
+// use Src\BoundedContext\Project\Domain\ValueObjects\ProjectEmail;
+// use Src\BoundedContext\Project\Domain\ValueObjects\ProjectEmailVerifiedDate;
 use Src\BoundedContext\Project\Domain\ValueObjects\ProjectId;
 use Src\BoundedContext\Project\Domain\ValueObjects\ProjectName;
-use Src\BoundedContext\Project\Domain\ValueObjects\ProjectPassword;
-use Src\BoundedContext\Project\Domain\ValueObjects\ProjectRememberToken;
+// use Src\BoundedContext\Project\Domain\ValueObjects\ProjectPassword;
+// use Src\BoundedContext\Project\Domain\ValueObjects\ProjectRememberToken;
 
 final class EloquentProjectRepository implements ProjectRepositoryContract
 {
@@ -27,14 +28,19 @@ final class EloquentProjectRepository implements ProjectRepositoryContract
     {
         $Project = $this->eloquentProjectModel->findOrFail($id->value());
 
-        print_r($Project);
+        // print_r($Project);
 
-        exit;
+        // exit;
 
         // Return Domain Project model
-        return new Project(
-            new ProjectId($Project->clientCompanyName)           
+
+         return new Project(
+            new ProjectName($Project->name)          
         );
+
+        // return new Project(
+        //     new ProjectId($Project->clientCompanyName)           
+        // );
 
         // return new Project(
         //     new ProjectName($Project->name),

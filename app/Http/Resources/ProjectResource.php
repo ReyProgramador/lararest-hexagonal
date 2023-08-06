@@ -17,9 +17,10 @@ class ProjectResource extends JsonResource
         // Map Domain User model values
         return [
             'data' => [
-                'client_company_name' => $this->ClientCompanyName()->value()                
-            ]
-        ];
+                // 'client_company_name' => $this->ClientCompanyName()->value()
+               'name' => $this->name()->value(),                
+           ]
+       ];
         // return [
         //     'data' => [
         //         'name' => $this->name()->value(),
@@ -27,5 +28,5 @@ class ProjectResource extends JsonResource
         //         'emailVerifiedDate' => $this->emailVerifiedDate()->value(),
         //     ]
         // ];
-    }
+   }
 }
