@@ -21,7 +21,7 @@ use App\Http\Controllers\GetProjectController;
 //     return $request->user();
 // });
 
-route::get('project',[GetProjectController::class,'project']);
+route::get('project/{id}',[GetProjectController::class,'project']);
 
 // route::get('project',[GetProjectController::class,'project'])->name('project');
 
