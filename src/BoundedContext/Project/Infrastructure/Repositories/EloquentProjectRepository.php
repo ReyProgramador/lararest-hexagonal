@@ -35,7 +35,7 @@ final class EloquentProjectRepository implements ProjectRepositoryContract
         // Return Domain Project model
 
          return new Project(
-            new ProjectName($Project->name)          
+            new ProjectName($Project->client_company_name)          
         );
 
         // return new Project(
