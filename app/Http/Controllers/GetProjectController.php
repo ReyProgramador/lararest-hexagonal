@@ -2,20 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\UserResource;
+use App\Http\Resources\ProjectResource;
 use Illuminate\Http\Request;
+
+// use Src\BoundedContext\Project\Infrastructure\GetProjectController as Testa;
+
+use Src\BoundedContext\Project\Infrastructure\GetProjectController as Testa;
 
 class GetProjectController extends Controller
 {
     /**
      * @var \Src\BoundedContext\User\Infrastructure\GetUserController
      */
-    private $getUserController;
+    private $getProjectController;
 
     public function __construct(\Src\BoundedContext\Project\Infrastructure\GetProjectController $getProjectController)
     {
         $this->getProjectController = $getProjectController;
     }
+
+    // public function __construct(Testa $getProjectController)
+    // {
+    //     $this->getProjectController = $getProjectController;
+
+    //     // print_r(test);
+    // }
 
     /**
      * Handle the incoming request.

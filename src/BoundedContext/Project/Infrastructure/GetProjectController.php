@@ -19,11 +19,11 @@ final class GetProjectController
 
     public function __invoke(Request $request)
     {
-        $userId = (int)$request->id;
+        $ProjectId = (int)$request->id;
 
-        $getUserUseCase = new GetUserUseCase($this->repository);
-        $user           = $getUserUseCase->__invoke($userId);
+        $getProjectUseCase = new GetProjectUseCase($this->repository);
+        $Project           = $getProjectUseCase->__invoke($ProjectId);
 
-        return $user;
+        return $Project;
     }
 }
