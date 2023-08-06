@@ -21,7 +21,11 @@ use App\Http\Controllers\GetProjectController;
 //     return $request->user();
 // });
 
-route::get('project/{id}',[GetProjectController::class,'project']);
+// route::get('project/{id}',[GetProjectController::class,'project']);
+
+// route::get('project/{id}','GetProjectController');
+
+route::get('project/{id}', \App\Http\Controllers\GetProjectController::class);
 
 // route::get('project',[GetProjectController::class,'project'])->name('project');
 
