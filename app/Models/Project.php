@@ -10,7 +10,7 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $table = 'projects';
+    // protected $table = 'projects';
 
 	public $timestamps = false;
 
@@ -23,10 +23,10 @@ class Project extends Model
 		'project_name'
 	];
 
-	public function quotes(){
+	// public function quotes(){
 		
-		return $this->hasMany(Quote::class);
-	}
+	// 	return $this->hasMany(Quote::class);
+	// }
 
 
 }

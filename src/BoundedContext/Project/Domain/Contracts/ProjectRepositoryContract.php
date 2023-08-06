@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Src\BoundedContext\Project\Domain\Contracts;
 
 use Src\BoundedContext\Project\Domain\Project;
-use Src\BoundedContext\Project\Domain\ValueObjects\ProjectEmail;
-use Src\BoundedContext\Project\Domain\ValueObjects\ProjectEmailVerifiedDate;
+// use Src\BoundedContext\Project\Domain\ValueObjects\ProjectEmail;
+// use Src\BoundedContext\Project\Domain\ValueObjects\ProjectEmailVerifiedDate;
 use Src\BoundedContext\Project\Domain\ValueObjects\ProjectId;
 use Src\BoundedContext\Project\Domain\ValueObjects\ProjectName;
 
